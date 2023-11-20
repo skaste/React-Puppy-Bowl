@@ -1,11 +1,12 @@
-
+import PuppyList from './components/PuppyBowlList'
 import './App.css'
 
-function App() {
+
+const App= () => {
 
   return (
     <>
-      
+      <h1>Puppy List</h1>
     </>
   )
 }
