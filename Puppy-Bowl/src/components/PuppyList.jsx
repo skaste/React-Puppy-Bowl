@@ -25,7 +25,7 @@ const PuppyList = () => {
       {
         allPuppyList.map((singlePuppy)=>{
           return(
-            <div onClick={()=>{
+            <div className="card-container" onClick={()=>{
               setShowDetails(true);
               setSinglePuppyImgUrl(allPuppies.data.players.imageURL);
             }} key={singlePuppy.id}>{singlePuppy.name}

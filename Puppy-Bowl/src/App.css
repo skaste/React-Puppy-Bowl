@@ -15,3 +15,11 @@ div{
   border: none;
   color:rgb(236, 73, 14);
 }
+.card-container{
+  display: grid;
+  grid-template-columns: repeat(1, 3fr);
+  gap: 25px;
+}
+body{
+  text-transform: capitalize;
+}
