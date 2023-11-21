@@ -29,6 +29,8 @@ const PuppyList = () => {
               setShowDetails(true);
               setSinglePuppyImgUrl(allPuppies.data.players.imageURL);
             }} key={singlePuppy.id}>{singlePuppy.name}
+            <p>{singlePuppy.breed}</p>
+            <p>{singlePuppy.status}</p>
             </div>
           )
         })

@@ -4,4 +4,14 @@
   padding: 2rem;
   text-align: center;
 }
-
+div{
+  border: red solid 5px;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+  color:rgb(234, 184, 167);
+}
+#root{
+  border: none;
+  color:rgb(236, 73, 14);
+}
