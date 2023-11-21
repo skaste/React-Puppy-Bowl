@@ -1,18 +1,38 @@
-import PuppyList from './components/PuppyList'
-import './App.css'
-import { useEffect } from 'react'
-// import PuppyDetails from './components/PuppyDetails'
+import React, { useState } from 'react';
+import PuppyList from './components/PuppyList';
+import PuppyDetails from './components/PuppyDetails';
+import './App.css';
 
+const App = () => {
+  const [page, setPage] = useState('list');
+  const [selectedPuppy, setSelectedPuppy] = useState(null);
 
-const App= () => {
+  const handlePuppyClick = (singlePuppy) => {
+    setSelectedPuppy(singlePuppy);
+    setPage('details');
+  };
+
+  const goToList = () => {
+    setPage('list');
+  };
 
   return (
-    <>
-      <h1>Puppy Bowl Players</h1>
-      <PuppyList/>
-      
-    </>
-  )
-}
+    <div id="page">
+      {page === 'list' && (
+        <>
+          <h1>Puppy Players</h1>
+          <PuppyList handlePuppyClick={handlePuppyClick} />
+        </>
+      )}
 
-export default App
+      {page === 'details' && (
+        <>
+          <h1>Player</h1>
+          <PuppyDetails selectedPuppy={selectedPuppy} goToList={goToList} />
+        </>
+      )}
+    </div>
+  );
+};
+
+export default App;

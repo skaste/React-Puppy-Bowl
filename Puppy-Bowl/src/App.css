@@ -3,17 +3,19 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  border:none;
 }
 div{
-  border: red solid 5px;
+  border: #bbe9db solid 5px;
   border-radius: 10px;
   padding: 5px;
   margin: 10px;
-  color:rgb(234, 184, 167);
+  color:#aeccc6;
+ 
 }
-#root{
+#page{
   border: none;
-  color:rgb(236, 73, 14);
+  color:#aeccc6;
 }
 .card-container{
   display: grid;
@@ -22,4 +24,17 @@ div{
 }
 body{
   text-transform: capitalize;
+}
+img{
+  display:inline;
+  width: 150px;
+}
+#pic{
+  width:50px;
+}
+.flexwrap{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  border:none;
 }

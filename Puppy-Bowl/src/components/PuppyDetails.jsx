@@ -1,24 +1,18 @@
-import { useEffect, useState } from "react";
+import React from 'react';
 
-const PuppyDetails=(singlePuppyDetails, setShowDetails)=>{
-const [singlePuppyDetails, setSinglePuppyDetails]=useState({});
+const PuppyDetails = ({ selectedPuppy, goToList }) => {
+  return (
+    <>
+      <h1>Puppy Details</h1>
+      <p>Name: {selectedPuppy.name}</p>
+      <p>Breed: {selectedPuppy.breed}</p>
+      <p>Status: {selectedPuppy.status}</p>
+      <img src={selectedPuppy.imageUrl} alt={selectedPuppy.name} />
+      <br/>
+      <br/>
+      <button onClick={goToList}>Go back to List</button>
+    </>
+  );
+};
 
-useEffect(()=>{
-  const getSinglePuppy= async()=>{
-    const response = await fetch(singlePuppyDetails);
-    const singlePuppy = await response.json();
-    setSinglePuppyDetails(singlePuppy);
-  }
-  getSinglePuppy();
-}, [])
-
-return(
-  <>
-  <h1>Puppy Details</h1>
-  {
-    <p>{singlePuppyDetails.name}</p>
-  }
-  </>
-)
-}
-export default PuppyDetails
+export default PuppyDetails;
