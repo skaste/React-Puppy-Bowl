@@ -28,7 +28,7 @@ const PuppyList = () => {
             <div onClick={()=>{
               setShowDetails(true);
               setSinglePuppyImgUrl(allPuppies.data.players.imageURL);
-            }} key={singlePuppy.name}>{singlePuppy.name}
+            }} key={singlePuppy.id}>{singlePuppy.name}
             </div>
           )
         })
